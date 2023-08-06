@@ -115,7 +115,7 @@ class App(TKMT.ThemedTKinterFrame):
         for name in os.listdir(self.current_directory):
             if os.path.isdir(os.path.join(self.current_directory, name)) and name != 'Bungee' and name != 'modules':
                 for file in os.listdir(self.current_directory + '/' + name):
-                    if re.match(r'^.+\.jar', file):
+                    if re.match(r'^server(.+)?\.jar', file):
                         if len(self.folders_json) > 0:
                             for folder in self.folders_json:
                                 if folder['name'] == name:

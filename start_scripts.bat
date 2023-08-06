@@ -2,6 +2,7 @@
 
 setlocal enabledelayedexpansion
 
+SET ram=4G
 SET name=%1
 SET jar=%2
 
@@ -11,6 +12,6 @@ echo Folder name = %name%
 echo Jar file name = %jar%
 
 cd "%name%"
-java -Xmx3G -Xms3G -jar "%jar%" nogui
+java -Xmx%ram% -Xms%ram% -jar "%jar%" nogui
 
 pause
